@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.LinkConfig;
 import com.example.demo.oraclemapper.LinkConfigMapper;
+import com.example.demo.utils.DatabaseUtil;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 import static io.restassured.RestAssured.get;
 
@@ -23,21 +27,23 @@ public class test {
 //    @Autowired
 //    LinkConfigMapper linkConfigDao;
 
-    @Autowired
-    private LinkConfigMapper linkConfigDao;
+//    @Autowired
+//    private LinkConfigMapper linkConfigDao;
 
 
 
 
     @Test(description = "大厅接口",dataProvider = "wap_hall_param")
-    public void wap_hall_info(String url){
+    public void wap_hall_info(String url) throws IOException, InterruptedException{
         Response response = get(url);
         String json=response.asString();
 //        System.out.println(response.getStatusCode());
 //        System.out.println(response.asString());
 //        LinkConfig linkconfig = wapHallService.getLinkConfigByType(77);
 //        String imageName=linkConfig.getImageName();
-        LinkConfig linkconfig = linkConfigDao.selectByPrimaryKey("2018021116LC064229729");
+        SqlSession session = DatabaseUtil.getSqlSession();
+        LinkConfig linkconfig = session.selectOne("selectByLinkType",77);
+//        LinkConfig linkconfig = linkConfigDao.selectByPrimaryKey("2018021116LC064229729");
         System.out.println("55555555");
 //        System.out.println(linkconfig);
         if(response.getStatusCode()==200){
