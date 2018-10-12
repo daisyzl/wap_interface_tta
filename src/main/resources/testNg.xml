@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First suite" verbose="1" >
+    <test name = "allTestsInAPackage" >
+        <classes>
+            <class name = "com.example.demo.controller.test" />
+   </classes>
+</test>
+
+    <listeners>
+        <listener class-name="com.example.demo.listener.ExtentReporterNG"/>
+    </listeners>
+</suite>
