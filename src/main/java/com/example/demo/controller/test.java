@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.LinkConfig;
 import com.example.demo.oraclemapper.LinkConfigMapper;
+import com.example.demo.raw.IRow;
 import com.example.demo.utils.DatabaseUtil;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -15,49 +16,45 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.List;
 
+import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.get;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.testng.Assert.assertEquals;
 
 @SpringBootConfiguration
 
-
+/*
+读取数据库
+ */
 public class test {
     private static Logger log= LoggerFactory.getLogger(test.class);
 
-//    @Autowired
-//    LinkConfigMapper linkConfigDao;
-
-//    @Autowired
-//    private LinkConfigMapper linkConfigDao;
-
-
-
-
     @Test(description = "大厅接口",dataProvider = "wap_hall_param")
-    public void wap_hall_info(String url) throws IOException, InterruptedException{
+    public void wap_hall_info(String url) throws IOException, InterruptedException {
         Response response = get(url);
         String json=response.asString();
-//        System.out.println(response.getStatusCode());
-//        System.out.println(response.asString());
-//        LinkConfig linkconfig = wapHallService.getLinkConfigByType(77);
-//        String imageName=linkConfig.getImageName();
+        log.info("response=" + response.asString());
         SqlSession session = DatabaseUtil.getSqlSession();
-        LinkConfig linkconfig = session.selectOne("selectByLinkType",77);
-//        LinkConfig linkconfig = linkConfigDao.selectByPrimaryKey("2018021116LC064229729");
-        System.out.println("55555555");
-//        System.out.println(linkconfig);
-        if(response.getStatusCode()==200){
+        LinkConfig linkconfig = session.selectOne("selectByLinkType", 77);
+        if (response.getStatusCode() == 200) {
             JsonPath jp = new JsonPath(json);
-//            assertEquals(100, jp.get("result"));
+            assertEquals(-1,jp.getInt("totalAward"));
+            List<String> bannerList=jp.get("gameInfoList.gameCn");
+            System.out.println(bannerList);
 
 
         }
     }
 
-    @DataProvider(name="wap_hall_param")
-    public Object[][] createData() {
-        Object[][] retObjArr = {  {"https://wap.ttacp8.com/wap_hall.html"} };
-        return (retObjArr);
+        @DataProvider(name = "wap_hall_param")
+        public static Object[][] createData () {
+            Object[][] retObjArr = {{"https://wap.ttacp8.com/wap_hall.html"}};
+            return (retObjArr);
+        }
     }
 
-}
+

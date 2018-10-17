@@ -1,0 +1,53 @@
+commonData:
+  common: "test"
+  caseUrl: "https://wap.ttacp8.com/wap_hall.html"
+caseDataList:
+  bannerList:
+  - imgUrl: 'http://img.ttacp8.cn/ttacp/product/images/duobao/activity/1508933001085_1.png',
+    jumpUrl: 'http://wap.ttacp8.com/activity/CouponSendActHomePage.html?activityId=Lottery3'
+  gameInfoList:
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 竞彩足球胜平负, gameDesc: 暂停销售, gameEn: jczq_spf_p,
+    gameId: 2011111521YX00602001, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505983918117_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/jczq.html', showWinningLabel: false, stopSale: false,
+    winningText: 周一开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 酷玩11选5, gameDesc: 暂停销售, gameEn: gxd11,
+    gameId: 2017111315YX75490867, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1511845053968_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/gxd11/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 劲爆11选5, gameDesc: 暂停销售, gameEn: gdd11,
+    gameId: 2013031213YX25424125, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505979716658_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/gdd11/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 排列3, gameDesc: 暂停销售, gameEn: pl3,
+    gameId: 2010080210YX00805072, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1513306554288_1.png',
+    jumpUrl: 'http://wap.ttacp8.com/t/pl3/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 排列5, gameDesc: 暂停销售, gameEn: pl5,
+    gameId: 2010080210YX00805078, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1513306991584_1.png',
+    jumpUrl: 'http://wap.ttacp8.com/t/pl5/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 竞彩篮球胜负, gameDesc: 暂停销售, gameEn: jclq_sf,
+    gameId: 2011081611YX00601001, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1510022021437_1.png',
+    jumpUrl: 'http://wap.ttacp8.com/t/jclq.html', showWinningLabel: false, stopSale: false,
+    winningText: 周二开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 双色球, gameDesc: 暂停销售, gameEn: ssq,
+    gameId: 2010032416YX00000001, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505978777501_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/ssq/', showWinningLabel: true, stopSale: false,
+    winningText: 后天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 大乐透, gameDesc: 暂停销售, gameEn: dlt,
+    gameId: 2010071317YX00244457, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505979619097_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/dlt/', showWinningLabel: false, stopSale: false,
+    winningText: 明天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 喜快3, gameDesc: 暂停销售, gameEn: hbkuai3,
+    gameId: 2014082210YX25514100, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505979727720_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/hbkuai3/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  - betHelpUrl: '', betUrl: '', cardType: '', gameCn: 好快3, gameDesc: 暂停销售, gameEn: jxkuai3,
+    gameId: 2017060515YX44153953, gameImg: 'http://img.ttacp8.cn/ttacp/product/images/duobao/lotteryConfig/1505979737697_1.png',
+    jumpUrl: 'https://wap.ttacp8.com/t/jxkuai3/', showWinningLabel: false, stopSale: false,
+    winningText: 今天开奖
+  totalAward: -1
+  downloadUrl: https://m3.ttacp8.com/nfop/tgnyy/index.htm?auto=start
+  resultParams:
+    result: "100"
+

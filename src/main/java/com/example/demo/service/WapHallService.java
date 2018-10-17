@@ -13,7 +13,6 @@ public class WapHallService {
     private LinkConfigMapper linkConfigDao;
 
     public LinkConfig getLinkConfigByType(Integer linkType){
-        System.out.println("999999999999");
         return linkConfigDao.selectByLinkType(linkType);
 
     }
